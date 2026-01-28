@@ -1,17 +1,17 @@
 
 # Project Overview
 
-Platform: Android
-Language: Kotlin
-UI: XML (ViewBinding)
-Architecture: Activity 기반 Hybrid 구조
-Min SDK: 28
-Target SDK: 36
-
-이 프로젝트는 순수 네이티브(Compose) 가 아닌
-WebView 중심의 Hybrid 앱 구조를 학습 및 정리하기 위한 목적의 개인 프로젝트입니다.
-
-
+Platform: Android  
+Language: Kotlin  
+UI: XML (ViewBinding)  
+Architecture: Activity 기반 Hybrid 구조  
+Min SDK: 28  
+Target SDK: 36  
+  
+이 프로젝트는 순수 네이티브(Compose) 가 아닌  
+WebView 중심의 Hybrid 앱 구조를 학습 및 정리하기 위한 목적의 개인 프로젝트입니다.  
+  
+  
 # Project Features
 
 WebView 기반 화면 구성
