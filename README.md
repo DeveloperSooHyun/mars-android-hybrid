@@ -1,4 +1,5 @@
-########################## Project Overview
+
+# Project Overview
 
 Platform: Android
 Language: Kotlin
@@ -11,14 +12,14 @@ Target SDK: 36
 WebView 중심의 Hybrid 앱 구조를 학습 및 정리하기 위한 목적의 개인 프로젝트입니다.
 
 
-########################## Project Features
+# Project Features
 
 WebView 기반 화면 구성
 JavaScript ↔ Android 브릿지 연동
 XML 기반 UI 레이아웃
 
 
-########################## Development Environment
+# Development Environment
 
 OS: Windows / macOS
 IDE: Android Studio
@@ -27,7 +28,7 @@ Build Tool: Gradle (Version Catalog 사용)
 JDK: 17
 
 
-########################## How to Run ? 
+# How to Run ? 
 
 Android Studio에서 프로젝트 열기
 필요한 SDK 설치
@@ -35,14 +36,14 @@ Android Studio에서 프로젝트 열기
 Run 실행
 
 
-########################## SDK Version
+# SDK Version
 
 Min     SDK	28
 Target  SDK	36
 Compile SDK	36
 
 
-########################## APIs & Libraries
+# APIs & Libraries
 
 Android WebView
 AndroidX Core
@@ -54,7 +55,7 @@ Gradle Version Catalog
 ※ Firebase Cloud Messaging(FCM) 등은 향후 추가 예정입니다.
 
 
-########################## Screen Shots
+# Screen Shots
 
 추후 애플리케이션 화면 캡처 추가 예정
 
