@@ -1,7 +1,7 @@
-package com.mars.hybrid.aos
+package com.mars.hybrid.aos.ui.main
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import com.mars.hybrid.aos.core.base.BaseActivity
 
 /**
  * ======================================================
@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
  *  - [2026.01.28] MainActivity Initialization
  * ======================================================
  */
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
