@@ -15,7 +15,7 @@ WebView 중심의 Hybrid 앱 구조를 학습 및 정리하기 위한 목적의 
 ## Project Features  
   
 _WebView 기반 화면 구성_  
-_JavaScript ↔ Android 브릿지 연동_
+_JavaScript ↔ Android 브릿지 연동_  
 _XML 기반 UI 레이아웃_  
   
   
