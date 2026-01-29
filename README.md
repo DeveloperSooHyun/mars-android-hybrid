@@ -14,43 +14,36 @@ WebView 중심의 Hybrid 앱 구조를 학습 및 정리하기 위한 목적의 
   
 ## Project Features  
   
-WebView 기반 화면 구성  
-JavaScript ↔ Android 브릿지 연동  
-XML 기반 UI 레이아웃  
+_WebView 기반 화면 구성_  
+_JavaScript ↔ Android 브릿지 연동_
+_XML 기반 UI 레이아웃_  
   
   
 ## Development Environment  
   
-OS: Windows / macOS  
-IDE: Android Studio  
-Language: Kotlin  
-Build Tool: Gradle (Version Catalog 사용)  
-JDK: 17  
+- OS: Windows / macOS  
+- IDE: Android Studio  
+- Language: Kotlin  
+- Build Tool: Gradle (Version Catalog 사용)  
+- JDK: 17  
   
   
 ## How to Run ?  
   
-Android Studio에서 프로젝트 열기  
-필요한 SDK 설치  
-에뮬레이터 또는 실제 디바이스 연결  
-Run 실행  
-  
-  
-## SDK Version  
-  
-Min     SDK	28  
-Target  SDK	36  
-Compile SDK	36  
+1. Android Studio에서 프로젝트 열기  
+2. 필요한 SDK 설치
+3. 에뮬레이터 또는 실제 디바이스 연결  
+4. Run 실행  
   
   
 ## APIs & Libraries  
   
-Android WebView  
-AndroidX Core  
-AppCompat  
-ViewBinding  
-Kotlin Standard Library  
-Gradle Version Catalog  
+- Android WebView  
+- AndroidX Core  
+- AppCompat  
+- ViewBinding  
+- Kotlin Standard Library  
+- Gradle Version Catalog  
   
 ※ Firebase Cloud Messaging(FCM) 등은 향후 추가 예정입니다.  
   
