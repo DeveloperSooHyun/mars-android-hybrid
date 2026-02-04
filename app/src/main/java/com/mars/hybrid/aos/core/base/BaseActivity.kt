@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.mars.hybrid.aos.core.delegate.BackPressDelegate
 import com.mars.hybrid.aos.core.manager.DeviceCheckManager
-import com.mars.hybrid.aos.ui.common.DeviceErrorHandler
+import com.mars.hybrid.aos.core.delegate.DeviceErrorHandler
 import androidx.activity.OnBackPressedCallback
 import com.mars.hybrid.aos.core.delegate.DialogDelegate
 import com.mars.hybrid.aos.core.delegate.UiCleanDelegate
@@ -31,7 +31,7 @@ open class BaseActivity : AppCompatActivity() {
     private lateinit var backPressDelegate: BackPressDelegate
     private lateinit var deviceCheckManager: DeviceCheckManager
     private lateinit var deviceErrorHandler: DeviceErrorHandler
-    private lateinit var dialogDelegate: DialogDelegate
+    lateinit var dialogDelegate: DialogDelegate
     private lateinit var permissionManager: PermissionManager
 
     val uiCleanDelegate = UiCleanDelegate()

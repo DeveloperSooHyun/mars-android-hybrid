@@ -8,6 +8,8 @@ android {
     namespace = "com.mars.hybrid.aos"
     compileSdk = 36
 
+    flavorDimensions += "server"
+
     defaultConfig {
         applicationId = "com.mars.hybrid.aos"
         minSdk = 28
@@ -27,6 +29,34 @@ android {
             )
         }
     }
+
+    productFlavors {
+        create("local") {
+            dimension = "server"
+            applicationIdSuffix = ".local"
+            versionNameSuffix = "-local"
+
+            resValue("string", "app_name", "Mars(Local)")
+            buildConfigField("String", "SERVER_URL", "\"http://\"")
+        }
+
+        create("dev") {
+            dimension = "server"
+            applicationIdSuffix = ".dev"
+            versionNameSuffix = "-dev"
+
+            resValue("string", "app_name", "Mars(Dev)")
+            buildConfigField("String", "SERVER_URL", "\"http://\"")
+        }
+
+        create("prod") {
+            dimension = "server"
+
+            resValue("string", "app_name", "Mars")
+            buildConfigField("String", "SERVER_URL", "\"https://\"")
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -43,11 +73,27 @@ android {
 }
 
 dependencies {
+    // Kotlin
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+
+    // activity
     implementation(libs.material)
 
+    // Test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // splash
+    implementation(libs.splash)
+
+    // retrofit2
+    implementation(libs.retrofit2)
+    implementation(libs.retrofit2.converter.gson)
+
+    // okhttp
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+
 }

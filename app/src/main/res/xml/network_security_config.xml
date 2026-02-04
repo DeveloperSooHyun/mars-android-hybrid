@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 기본은 HTTPS만 허용 -->
+    <base-config cleartextTrafficPermitted="false" />
+
+    <!-- 1. 로컬 IP 대역 허용 (개발 / 사내) -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain tools:ignore="NetworkSecurityConfig">192.168.0.119</domain>    <!-- localhost -->
+    </domain-config>
+
+    <!-- 2. 개발 서버 도메인 HTTP 허용 -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain tools:ignore="NetworkSecurityConfig">192.168.0.111</domain>
+    </domain-config>
+
+</network-security-config>

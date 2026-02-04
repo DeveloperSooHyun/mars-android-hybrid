@@ -5,7 +5,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.mars.hybrid.aos.R
 import com.mars.hybrid.aos.core.base.BaseActivity
-import com.mars.hybrid.aos.core.delegate.DialogDelegate
 import com.mars.hybrid.aos.core.delegate.PermissionDelegate
 import com.mars.hybrid.aos.databinding.ActivityPermissionBinding
 import androidx.core.view.isEmpty
@@ -28,7 +27,6 @@ class PermissionActivity : BaseActivity() {
 
     private lateinit var binding: ActivityPermissionBinding
     private lateinit var permissionDelegate: PermissionDelegate
-    private lateinit var dialogDelegate: DialogDelegate
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +34,6 @@ class PermissionActivity : BaseActivity() {
         setContentView(binding.root)
 
         permissionDelegate = PermissionDelegate(this)
-        dialogDelegate = DialogDelegate(this, uiCleanDelegate)
 
         if (binding.permissionContainer.isEmpty()) {
             setupItems()
@@ -47,6 +44,9 @@ class PermissionActivity : BaseActivity() {
         }
     }
 
+    /* =========================================================
+     * 권한 리스트 생성
+     * ========================================================= */
     private fun setupItems() {
         val container = binding.permissionContainer
 
@@ -69,8 +69,8 @@ class PermissionActivity : BaseActivity() {
     }
 
     /* =========================================================
-    * 권한 체크
-    * ========================================================= */
+     * 권한 체크
+     * ========================================================= */
     private fun checkPermission() {
         permissionDelegate.requestIfNeeded {
             versionCheck()
@@ -78,8 +78,8 @@ class PermissionActivity : BaseActivity() {
     }
 
     /* =========================================================
-    * 권한 결과 리턴
-    * ========================================================= */
+     * 권한 결과 리턴
+     * ========================================================= */
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -106,13 +106,16 @@ class PermissionActivity : BaseActivity() {
     }
 
     /* =========================================================
-    * 권한 성공 시 버전 체크
-    * ========================================================= */
+     * 권한 성공 시 버전 체크
+     * ========================================================= */
     private fun versionCheck() {
         // 👉 여기서 Api 호출 (Repository로)
     }
 }
 
+/* =========================================================
+ * 권한 리스트 내용 구조
+ * ========================================================= */
 data class PermissionItem(
     val icon: Int,
     val title: String,

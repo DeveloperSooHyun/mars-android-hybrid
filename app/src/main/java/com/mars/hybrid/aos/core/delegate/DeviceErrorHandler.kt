@@ -1,10 +1,9 @@
-package com.mars.hybrid.aos.ui.common
+package com.mars.hybrid.aos.core.delegate
 
 import android.app.Activity
 import android.content.Intent
 import com.mars.hybrid.aos.R
 import com.mars.hybrid.aos.core.common.DeviceCheckResult
-import com.mars.hybrid.aos.core.delegate.DialogDelegate
 import com.mars.hybrid.aos.core.manager.DeviceErrorType
 import com.mars.hybrid.aos.ui.error.ErrorActivity
 import com.mars.hybrid.aos.ui.permission.PermissionActivity

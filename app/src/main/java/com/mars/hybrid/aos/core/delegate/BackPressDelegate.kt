@@ -2,7 +2,7 @@ package com.mars.hybrid.aos.core.delegate
 
 import android.app.Activity
 import com.mars.hybrid.aos.R
-import com.mars.hybrid.aos.core.util.CommonUtil
+import com.mars.hybrid.aos.core.util.DeviceUtil
 
 /**
  * ======================================================
@@ -21,6 +21,7 @@ class BackPressDelegate(
 ) {
     private var lastBackPressedTime = 0L
     private val interval = 2000L
+    val uiCleanDelegate = UiCleanDelegate()
 
     /* =========================================================
     * 두번 뒤로가기 클릭 이벤트
@@ -28,11 +29,11 @@ class BackPressDelegate(
     fun handleDoubleBackPress() {
         val now = System.currentTimeMillis()
         if (now - lastBackPressedTime < interval) {
-            CommonUtil.finishApp(activity)
+            DeviceUtil.finishApp(activity)
         } else {
-            CommonUtil.toastShow(
-                activity,
-                activity.getString(R.string.app_finish_again)
+            uiCleanDelegate.showToast(
+                activity.applicationContext,
+                activity.getString(R.string.msg_app_finish)
             )
             lastBackPressedTime = now
         }

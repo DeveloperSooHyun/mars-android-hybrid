@@ -22,8 +22,8 @@ import androidx.core.app.ActivityCompat
 class PermissionManager {
 
     /* =========================================================
-    * 필수 권한 생성
-    * ========================================================= */
+     * 필수 권한 생성
+     * ========================================================= */
     @SuppressLint("InlinedApi")
     fun getRequiredPermissions(context: Context): List<String> {
         val sdk = Build.VERSION.SDK_INT
@@ -62,8 +62,8 @@ class PermissionManager {
 
 
     /* =========================================================
-    * 권한 거부 시
-    * ========================================================= */
+     * 권한 거부 시
+     * ========================================================= */
     fun getDeniedPermissions(context: Context): List<String> {
         return getRequiredPermissions(context).filter {
             ActivityCompat.checkSelfPermission(context, it) != PackageManager.PERMISSION_GRANTED

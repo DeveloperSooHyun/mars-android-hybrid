@@ -2,6 +2,24 @@
 <resources>
 
     <!-- =========================================================
+         1. App 기본 테마
+    ========================================================== -->
+    <style name="Theme.App" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brown_600</item>
+        <item name="colorPrimaryVariant">@color/brown_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+
+    <!-- =========================================================
+         1. Splash 화면 테마
+    ========================================================== -->
+    <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+
+    <!-- =========================================================
          1. Base Typography (폰트, 줄간격 공통)
     ========================================================== -->
     <style name="App_Text_Base">
