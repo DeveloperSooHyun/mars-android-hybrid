@@ -1,6 +1,7 @@
 package com.mars.hybrid.aos.ui.main
 
 import android.os.Bundle
+import com.mars.hybrid.aos.R
 import com.mars.hybrid.aos.core.base.BaseActivity
 
 /**
@@ -9,8 +10,7 @@ import com.mars.hybrid.aos.core.base.BaseActivity
  * Developer  : Mars
  * Date       : 2026-01-28
  * Description:
- *  - Entry point of the Android Hybrid application.
- *  - This activity hosts the WebView and connects the Web layer with native Android features via a JavaScript bridge.
+ *  - webview fragment 틀
  *
  * History:
  *  - [2026.01.28] MainActivity Initialization
@@ -19,5 +19,12 @@ import com.mars.hybrid.aos.core.base.BaseActivity
 class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, WebViewFragment())
+                .commit()
+        }
     }
 }

@@ -7,7 +7,7 @@ import com.mars.hybrid.aos.App
 /**
  * ======================================================
  * Title      : PreferenceUtil
- * Developer  : 박수현
+ * Developer  : Mars
  * Date       : 2026-02-02
  * Description:
  *  - 앱 SharedPreferences 설정
@@ -27,6 +27,10 @@ object PreferenceUtil {
 
     fun getString(key: String, def: String = ""): String =
         prefs.getString(key, def) ?: def
+
+    fun remove(key: String) {
+        prefs.edit { remove(key) }
+    }
 
     fun clear() = prefs.edit { clear() }
 }

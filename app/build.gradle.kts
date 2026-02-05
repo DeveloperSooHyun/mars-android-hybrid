@@ -37,7 +37,7 @@ android {
             versionNameSuffix = "-local"
 
             resValue("string", "app_name", "Mars(Local)")
-            buildConfigField("String", "SERVER_URL", "\"http://\"")
+            buildConfigField("String", "SERVER_URL", "\"http://192.168.0.75:8080\"")
         }
 
         create("dev") {
@@ -46,7 +46,7 @@ android {
             versionNameSuffix = "-dev"
 
             resValue("string", "app_name", "Mars(Dev)")
-            buildConfigField("String", "SERVER_URL", "\"http://\"")
+            buildConfigField("String", "SERVER_URL", "\"http://192.168.0.75:8080\"")
         }
 
         create("prod") {
@@ -96,4 +96,9 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging)
 
+    // biometric
+    implementation(libs.androidx.biometric)
+
+    // swipe
+    implementation(libs.swipe)
 }
